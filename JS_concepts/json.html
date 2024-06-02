@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to handle json</title>
+</head>
+<body>
+    <script>
+        let json1 = 'raju'
+        let json2 = 23
+        let json3 = true
+        let json4 = [1, 4, 5]
+        let json5 = {
+            "stock" : "TCS",
+            "price" : 3500
+        }
+        let json6 = `[
+            {
+                "stock" : "reliance",
+                "price" : 4000
+            },
+            {
+                "stock" : "jio",
+                "price" : 3500
+            },
+            {
+                "stock" : "rolex",
+                "price" : 5000
+            }
+        ]`
+
+        let parsed = JSON.parse(json6)
+        console.log(parsed[2])
+
+        let jsonString = JSON.stringify(parsed)
+        console.log(jsonString)
+
+        // console.log(json6)
+    </script>
+</body>
+</html>

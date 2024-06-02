@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Sum</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 5, 7, 6, 3]
+        let target = 13
+        console.log(solution(arr, target))
+
+        function solution(arr, target){
+            let map = new Map()
+            for(let i = 0; i < arr.length; i++){
+                let complement = target - arr[i]
+                if(map.has(complement)){
+                    return [map.get(complement),i]
+                }
+                map.set(arr[i],i)
+            }
+        }
+    </script>
+</body>
+</html>

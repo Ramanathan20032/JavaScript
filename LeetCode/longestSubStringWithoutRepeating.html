@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest SubString</title>
+</head>
+<body>
+    <script>
+        let str = 'pqppqrmr'
+
+        function lengthOfLongestSubstring(str){
+            let maxLength = 0
+            let currentString = []
+            for(let i = 0; i < str.length; i++){
+                let currentIndex = currentString.indexOf(str[i])
+                // if the current index is not equal to -1
+                if(currentIndex != -1){
+                      currentString.splice(0, currentIndex+1)
+                }
+                // if the current index is -1
+                currentString.push(str[i])
+                maxLength = Math.max(maxLength, currentString.length)
+            }
+            return maxLength
+        }
+
+        console.log(lengthOfLongestSubstring(str))
+    </script>
+</body>
+</html>

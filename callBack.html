@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+
+    <select id="branch">
+        <option value="select">select</option>
+    </select>
+
+    <script>
+        // callBack - function passed as a argument
+
+        // In console page
+        function greetConsole(name){
+            console.log('hello',name)
+        }
+
+        // In web page
+        function greetHeading(name){
+            const heading = document.querySelector('h1')
+            heading.innerHTML = 'hello ' + name
+        }
+
+        function greet(callBackFunction){
+            callBackFunction('Ram')
+        }
+
+        greet(greetConsole)
+        greet(greetHeading)
+
+        // for each
+        let arr = ['deepa', 'bheem', 'raju']
+        arr.forEach(print)
+
+        function print(val){
+            console.log(val.toUpperCase())
+        }
+
+        // foreach -> Arrow Function
+        arr.forEach(val => console.log(val))
+
+        arr.forEach((val,index,arr) => {
+            arr[index] = val.toUpperCase()
+        })
+        console.log(arr)
+
+        // ----------
+        let array = ['ECE', 'CSE', 'IT', 'EEE']
+        array.forEach(val => {
+            const opt = document.createElement('option')
+            opt.textContent = val
+            opt.value = val
+            let branch = document.getElementById('branch')
+            branch.appendChild(opt)
+        })
+
+        // ---------------
+        let num = [6, -5, 7, -2, 4, 6, -1]
+        num.forEach(val => {
+            if(!(val < 0)){
+                console.log(val)
+            }
+        })
+    </script>
+</body>
+</html>
