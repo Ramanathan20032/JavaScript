@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+<body>
+    <div id="one">
+        <h1>Hello</h1>
+    </div>
+</body>
+<script>
+    var div = document.getElementById("one")
+    // innerHTML deals with html 
+    // console.log(div.innerHTML)    // <h1>Hello</h1>
+    // textContent deals with content of the tag
+    // console.log(div.textcontent)  // Hello
+
+    div.textContent = "Bye"
+    div.innerHTML = "<h1>Bye</h1>"
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+</head>
+<body>
+    <div id="box">
+        <p>Hello</p>
+    </div>
+</body>
+<script>
+    var content = document.getElementById("box")
+    var h1Element = document.createElement("h1")
+    h1Element.innerHTML = "Bye"
+    console.log(h1Element)
+    content.textContent = h1Element.textContent
+</script>
+</html>

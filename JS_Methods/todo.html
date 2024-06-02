@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <button onclick="add()">Add</button>
+    <ul id="list-containers">
+        <li>Hello
+            <button onclick="deleteItem(event)">Delete</button>
+        </li>
+    </ul>
+</body>
+<script>
+    var list_containers = document.querySelector("#list-containers")
+    var input = document.querySelector("#input")
+
+    function add(){
+        var listitems = document.createElement("li")
+        listitems.innerHTML = input.value + " <button onclick='deleteItem(event)'>Delete</button>"
+        list_containers.append(listitems)
+        // console.log(listitems)
+    }
+    
+    function deleteItem(event){
+        event.target.parentElement.remove()
+    }
+
+</script>
+</html>

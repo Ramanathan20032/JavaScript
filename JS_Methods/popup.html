@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .overlay{
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: .8;
+            z-index: 1;
+            display: none;
+        }
+        .popupbox{
+            position: absolute;
+            z-index: 2;
+            background-color: aliceblue;
+            width: 35%;
+            padding: 20px;
+            border-radius: 7px;
+            left: 30%;
+            display: none;
+        }
+        #showbutton{
+            background-color: rgb(71, 228, 228);
+            border: 2px solid rgb(71, 228, 228);
+            border-radius: 3px;
+            padding: 5px;
+            color: darkslategray;
+        }
+        #closebutton{
+            position: relative;
+            background-color: rgb(213, 108, 89);
+            border: 2px solid rgb(213, 108, 89);
+            border-radius: 3px;
+            padding: 5px;
+            color: darkred;
+            left: 45%;
+        }
+    </style>
+    <title>popup pratice</title>
+</head>
+<body>
+    <button id="showbutton" onclick="showbutton()">Show</button>
+    <div class="overlay"></div>
+    <div class="popupbox">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti eos dolorem dignissimos corrupti dolorum. Voluptate ullam aut repudiandae cupiditate dolorem.</p>
+        <button id="closebutton" onclick="closebutton()">Close</button>
+    </div>
+</body>
+<script>
+    // selecting overlay, popupbox
+    var overlay = document.querySelector(".overlay")
+    var popupbox = document.querySelector(".popupbox")
+
+    function showbutton(){
+        overlay.style.display = "block"
+        popupbox.style.display = "block"
+    }
+
+    function closebutton(){
+        overlay.style.display = "none"
+        popupbox.style.display = "none"
+    }
+
+</script>
+</html>

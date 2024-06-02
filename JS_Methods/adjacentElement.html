@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent Element</title>
+</head>
+<body>
+    <div>
+        <h1>praveen</h1>
+        <h1>Naveen</h1>
+    </div>
+</body>
+<script>
+    var div = document.querySelector("div")
+    var h1 = document.createElement("h1")
+    h1.textContent = "Hello" 
+    // before the div
+    div.insertAdjacentElement("beforebegin",h1)
+    // after the div
+    div.insertAdjacentElement("afterend",h1)
+    // inside the div like the prepend (1st)
+    div.insertAdjacentElement("afterbegin",h1)
+    // inside the div like the append (last)
+    div.insertAdjacentElement("beforeend",h1)
+</script>
+</html>

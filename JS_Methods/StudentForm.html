@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .table {
+            border: 2px solid black;
+            padding: 10px;
+            width: 400px;
+            margin-top: 20px;
+        }
+        .i{
+            width: 95%;
+            padding: 5px;
+        }
+        .table th{
+            border: 1px solid;
+            padding: 8px;
+        }
+        .table td {
+            border: 1px solid;
+            padding: 8px;
+        }
+
+        .table button {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        .deleteButton{
+            background-color: rgba(223, 8, 8, 0.76);
+            color: aliceblue;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Student form</title>
+</head>
+<body>
+    <!-- studentTable -->
+   
+        <table class="table" id="studentTable">
+            <caption><h4>STUDENT FORM</h4></caption>
+            <tr>
+                <th><label for="Name">Name</label></th>
+                <td><input class="i" id="Name" type="text" name="name" placeholder="your Name"></td>
+            </tr>
+            <tr>
+                <th><label for="Age">Age</label></th> 
+                <td><input class="i" id="Age" type="number" name="Age" placeholder="your Age" value="19"></td>
+            </tr>
+            <tr>
+                <th><label>Gender</label></th>
+                <td>
+                    <input id="male" type="radio" name="gender">
+                    <label for="male">Male</label>
+                    <input id="female" type="radio" name="gender">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="Course">Course</label></th>
+                <td>
+                    <select class="i" id="Course" name="course">
+                        <option value="javaScript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="email">E-mail</label></th>
+                <td><input class="i" id="email" type="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="addStudent()">Add Student</button>
+                </td>
+            </tr>
+        </table>
+    
+
+    <!-- savedStudentsTable -->
+    <table class="table" id="savedStudentsTable">
+        <caption><h4>Saved Students</h4></caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="savedStudentsBody"></tbody>
+    </table>
+
+    <script>
+        function addStudent() {
+            var name = document.getElementById('Name').value;
+            var age = document.getElementById('Age').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var course = document.getElementById('Course').value;
+            var email = document.getElementById('email').value;
+
+            if (name && age && gender && course && email) {
+                // Create a new row for the saved students table
+                var savedStudentsTableBody = document.getElementById('savedStudentsBody');
+                var newRow = savedStudentsTableBody.insertRow();
+                newRow.insertCell(0).textContent = name;
+                newRow.insertCell(1).textContent = age;
+                newRow.insertCell(2).textContent = gender ? gender.value : '';
+                newRow.insertCell(3).textContent = course;
+                newRow.insertCell(4).textContent = email;
+
+                // Add a delete button to the new row
+                var deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'deleteButton'
+                deleteButton.onclick = function () {
+                    deleteStudent(newRow);
+                };
+                newRow.insertCell(5).appendChild(deleteButton);
+
+                // Clear input fields
+                document.getElementById('Name').value = '';
+                document.getElementById('Age').value = '19';
+                document.querySelector('input[name="gender"]:checked').checked = false;
+                document.getElementById('Course').value = 'javaScript';
+                document.getElementById('email').value = '';
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+
+        function deleteStudent(row) {
+            var confirmation = confirm('Are you sure you want to delete this student?');
+            if (confirmation) {
+                var table = row.parentNode.parentNode;
+                table.deleteRow(row.rowIndex);
+            }
+        }
+    </script>
+</body>
+</html>

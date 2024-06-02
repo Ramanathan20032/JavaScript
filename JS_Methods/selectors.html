@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<body>
+    <div class="classOne">
+        Hello
+    </div>
+    <div id="idOne">
+        Hello1
+    </div>
+    <p>
+        Hello2
+    </p>
+    <hr>
+    <hr>
+    <!-- ------ end of 1st part-->
+
+    <h1>one</h1>
+    <h1>two</h1>
+    <hr>
+    <hr>
+     <!-- ------ end of 2nd part-->
+
+     <h3 class="ok">one</h3>
+     <h3 class="ok">two</h3>
+     <h3 class="ok">three</h3>
+
+</body>
+<script>
+    // div select
+    // querySelector can be used to select id, class, element
+
+    // class is selected using .
+    var classOne = document.querySelector(".classOne")
+    console.log(classOne)
+    // id is selected using #
+    var idOne = document.querySelector("#idOne")
+    console.log(idOne)
+    // element is selected using elementName
+    var p = document.querySelector("p")
+    console.log(p)
+    // ------- end of 1st part
+
+    var h1 = document.querySelector("h1")
+    console.log(h1)  // it will  print the <h1>one</h1>
+    // because it presents first
+
+    // ------- end of 2nd part
+
+    var h3 = document.querySelector(".ok") 
+    console.log(h3) //it will print <h3 class="ok">one</h3>
+    // because it presents first
+
+    // to print all the [class] - querySelectorAll
+    // it will return as nodelist ~ as Array
+
+    var headClass = document.querySelectorAll(".ok")
+    console.log(headClass)
+    for(i = 0; i < headClass.length; i++){
+        console.log(headClass[i].textContent )
+    }
+</script>
+</html>
