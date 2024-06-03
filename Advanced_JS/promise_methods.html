@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises Static method</title>
+</head>
+<body>
+    <script>
+        let reachA = new Promise((resolve, reject)=>{
+        const reached = true
+        if(reached){
+            setTimeout(resolve, 3000, 'bheem reached')
+        }
+        else{
+            reject('bheem not reached')
+        }
+        })
+        let reachB = new Promise((resolve, reject)=>{
+            const reached = true
+            if(reached){
+                setTimeout(resolve, 2000, 'vicky reached')
+            }
+            else{
+                reject('vicky not reached')
+            }
+        })
+        let reachC = new Promise((resolve, reject)=>{
+            const reached = false
+            if(reached){
+                setTimeout(resolve, 1000, 'raju reached')
+            }
+            else{
+                reject('raju not reached')
+            }
+        })
+
+        // -all
+        // Promise.all([reachA, reachB, reachC])
+        // .then((message)=>console.log(message))
+        // .catch((message)=>console.log(message))
+
+        // -allSettled
+        // Promise.allSettled([reachA, reachB, reachC])
+        // .then((message)=>console.log(message))
+        // .catch((message)=>console.log(message))
+
+        // -any
+        // Promise.any([reachA, reachB, reachC])
+        // .then((message)=>console.log(message))
+        // .catch((message)=>console.log(message))
+
+        // -race
+        Promise.race([reachA, reachB, reachC])
+        .then((message)=>console.log(message))
+        .catch((message)=>console.log(message))
+    </script>
+</body>
+</html>

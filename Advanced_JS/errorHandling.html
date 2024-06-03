@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+
+    <script>
+        try{
+            num = prompt('Enter a Number')
+            if(num === ''){
+                throw `can't be empty`
+            }
+            if(is(NaN)){
+                throw 'Enter a valid Number'
+            }
+            console.log(num**2)
+        }
+        catch(error){
+            console.log(error)
+        }
+        finally{
+            console.log('code terminates')
+        }
+    </script>
+</body>
+</html>
