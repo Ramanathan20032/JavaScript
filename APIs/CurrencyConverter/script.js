@@ -40,6 +40,7 @@ btn.addEventListener('click',function(){
 
 function convert(currency1, currency2, inputVal){
     const host = 'api.frankfurter.app';
+    // fetching the required details.
     fetch(`http://${host}/latest?amount=${inputVal}&from=${currency1}&to=${currency2}`)
     .then((response) => response.json())
     .then((data) => {
