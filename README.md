@@ -22,6 +22,6 @@ Everything in JavaScript happens inside the 'Execution context'. Whenever the Ja
 - It is used to manage the execution context.
 - Call stack maintains the order of execution of "Execution context"
 
-When the whole execution of code terminates. The whole execution context will be deleted.
+When the whole execution of code terminates. The global execution context will be deleted.
 
 ---
