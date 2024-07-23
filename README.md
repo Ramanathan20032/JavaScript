@@ -1,3 +1,4 @@
+
 # JavaScript
 JavaScript is a Synchronous and single threaded language.
 
@@ -14,4 +15,13 @@ Everything in JavaScript happens inside the 'Execution context'. Whenever the Ja
 - At the phase 2, Code executed in sequential order.
 - when the function is invoked, It will creates a 'local execution context'. It will have new Memory creation and Code execution phase.
 - once the function get completed, It return a value to the function call.
-- The local Execution context gets deleted after completion.
+- The local Execution context gets deleted after completion of function.
+
+### Call Stack:
+- The whole execution context local & global are managed by call stack. 
+- It is used to manage the execution context.
+- Call stack maintains the order of execution of "Execution context"
+
+When the whole execution of code terminates. The whole execution context will be deleted.
+
+---
