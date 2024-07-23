@@ -1,14 +1,17 @@
-
 # JavaScript
 JavaScript is a Synchronous and single threaded language.
 
 
-#### Execution content :
-Everything in JavaScript happens inside the 'Execution Content'. Whenever the JavaScript runs, execution content is created in two phases.
+### Execution context :
+Everything in JavaScript happens inside the 'Execution context'. Whenever the JavaScript runs, The 'Global execution context' is created in two phases.
 
     - Memory creation phase.
     - Code execution phase.
     
 #### phase 1 - Memory creation phase (variable Environment)
-    
+- At the phase 1, initially the variable are declared 'Undefined'. As the function are assigned with 'whole code' of function. 
 #### phase 2 - Code execution phase (Thread of Execution)
+- At the phase 2, Code executed in sequential order.
+- when the function is invoked, It will creates a 'local execution context'. It will have new Memory creation and Code execution phase.
+- once the function get completed, It return a value to the function call.
+- The local Execution context gets deleted after completion.
