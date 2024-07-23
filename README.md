@@ -1,9 +1,11 @@
+
 # JavaScript
 JavaScript is a Synchronous and single threaded language.
 
 
 #### Execution content :
-    Everything in JavaScript happens inside the 'Execution Content'. Whenever the JavaScript runs, execution content is created in two phases.
+Everything in JavaScript happens inside the 'Execution Content'. Whenever the JavaScript runs, execution content is created in two phases.
+
     - Memory creation phase.
     - Code execution phase.
     
