@@ -30,3 +30,25 @@ When the whole execution of code terminates. The whole execution context will be
 - when the function is declared using arrow function [() =>] or using variable name are behaved as a variable, which is allocated in Memory as 'Undefined'.
 
 ---
+### functions in Js:
+Functions are the small set of instruction.
+
+    var x = 1;
+    a();
+    b();
+    console.log(x); // 1
+    function a(){
+        var x = 10;
+        console.log(x); // 10
+    }
+    function b(){
+        var x = 100;
+        console.log(x); // 100
+    }
+    
+- Whenever the new function is invoked it creates a brand new execution context with Memory creation and code execution phase. 
+- Then pushed into the call Stack.
+- The local execution context has its own Memory space.
+- when the function is completed, it pop-out from the call stack and move the control to the "Global execution context".
+
+---
