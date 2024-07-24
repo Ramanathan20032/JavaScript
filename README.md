@@ -22,6 +22,11 @@ Everything in JavaScript happens inside the 'Execution context'. Whenever the Ja
 - It is used to manage the execution context.
 - Call stack maintains the order of execution of "Execution context"
 
-When the whole execution of code terminates. The global execution context will be deleted.
+When the whole execution of code terminates. The whole execution context will be deleted.
+
+---
+### Hoisting in Js:
+- Hoisting is a phenomenon in Js. By which we can access the variables and functions even before initialized.
+- when the function is declared using arrow function [() =>] or using variable name are behaved as a variable, which is allocated in Memory as 'Undefined'.
 
 ---
