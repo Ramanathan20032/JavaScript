@@ -27,6 +27,7 @@ When the whole execution of code terminates. The whole execution context will be
 ---
 ### Hoisting in Js:
 - Hoisting is a phenomenon in Js. By which we can access the variables and functions even before initialized.
+    -
 - when the function is declared using arrow function [() =>] or using variable name are behaved as a variable, which is allocated in Memory as 'Undefined'.
 
 ---
@@ -45,10 +46,19 @@ Functions are the small set of instruction.
         var x = 100;
         console.log(x); // 100
     }
-    
 - Whenever the new function is invoked it creates a brand new execution context with Memory creation and code execution phase. 
 - Then pushed into the call Stack.
 - The local execution context has its own Memory space.
 - when the function is completed, it pop-out from the call stack and move the control to the "Global execution context".
 
 ---
+### Window & this 
+- when an js code runs. It creates a global execution context along with it creates window & this.
+- window & this are created by JavaScript engine.
+    
+#### Window : 
+- It is a global object which is created along with 'global execution context'.
+- In Browsers, global object is known as Windows.
+    -
+At  global execution context, this === window.
+
