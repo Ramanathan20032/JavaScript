@@ -71,11 +71,11 @@ At  global execution context, this === window.
 - whenever the execution context is created 'this' is created.
 
 ---
-###  Undefined Vs not defined 
+###  Undefined Vs Not defined 
 #### Undefined(special keyword) :
 - It allocates 'Undefined' in Memory to the variable in the code, even before the single execution of code.
 - It is like a placeholder which is placed in a Memory. until the variable assigns with some value.
-#### not defined :
+#### Not defined :
 - It doesn't allocate Memory for the data, which is not declared.
 
 JavaScript is a loosely typed language.
