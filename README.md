@@ -88,3 +88,11 @@ JavaScript is a loosely typed language.
     console.log(a); // Hello
 
 ---
+### Scope, Scope chain & lexical environment
+#### scope :
+- where you can access a specific variable (or) function in the code.
+
+#### lexical environment :
+- lexical environment is a local Memory along with the lexical environment of its parent.
+- lexical - In Hierarchy.
+- local Memory + lexical environment of its parent.
