@@ -96,3 +96,19 @@ JavaScript is a loosely typed language.
 - lexical environment is a local Memory along with the lexical environment of its parent.
 - lexical - In Hierarchy.
 - local Memory + lexical environment of its parent.
+
+        function a(){
+            var b = 10;
+            c();
+            function c(){
+                console.log(b);
+            }
+        }
+        a();
+- when the execution context is created it also get reference to the lexical environment of its parent.
+- At, Global level it refers to the null.
+
+#### Scope chain :
+- The chain of lexical environment is known as scope chain.
+
+---
