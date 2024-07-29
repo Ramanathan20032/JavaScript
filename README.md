@@ -112,3 +112,9 @@ JavaScript is a loosely typed language.
 - The chain of lexical environment is known as scope chain.
 
 ---
+### var, let & const 
+- 'var' declaration are Hoisted in global Memory space as 'Undefined' [global].
+- let & const declaration are 'Hoisted'. But not in the global Memory space.
+- They are allocated Memory in different Memory space as "Undefined" [Script].
+- we cannot access the variable in the [Script] Memory space, before get initialized.
+- let & const are in TDZ (Temporal Dead Zone).
