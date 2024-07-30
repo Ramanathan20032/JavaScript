@@ -134,3 +134,19 @@ TDZ is the time "Since the let & const variable are Hoisted" & "Till it initiali
 To improve : put the declaration & initialized at the top of the scope.
 
     Usage : const > let > var
+
+### Restriction of let & const :
+let - Redeclaration is not possible.
+
+    let a = 10;
+    let a = 11; // syntax error
+    // It is possible in var.
+
+const - It must be initialized at the palce of declaration. It cannot be redefine.
+
+    const a;
+    a = 10;      // syntax error
+    // It is possible in let.
+
+    const a = 100;
+    a = 1000;    // type error 
