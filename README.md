@@ -150,3 +150,16 @@ const - It must be initialized at the palce of declaration. It cannot be redefin
 
     const a = 100;
     a = 1000;    // type error 
+
+---
+### Type Error Vs syntax Error Vs Refernece Error
+#### Type Error :
+- Re-Assignment to a const variable
+#### syntax Error :
+- Missing initializer at const variable
+- Redeclaration in 'const' & 'let'.
+#### Refernece Error :
+- A variable which is not inside the Memory space [Not defined].
+- When you try to access the variable inside the "Temporal Dead Zone". It throws 'reference error'.
+
+---
