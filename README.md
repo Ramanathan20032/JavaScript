@@ -152,7 +152,7 @@ const - It must be initialized at the palce of declaration. It cannot be redefin
     a = 1000;    // type error 
 
 ---
-### Type Error Vs syntax Error Vs Refernece Error
+### Type Error Vs syntax Error Vs Reference Error
 #### Type Error :
 - Re-Assignment to a const variable
 #### syntax Error :
