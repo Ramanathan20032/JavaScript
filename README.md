@@ -156,7 +156,7 @@ const - It must be initialized at the palce of declaration. It cannot be redefin
 #### Type Error :
 - Re-Assignment to a const variable
 #### syntax Error :
-- Missing initializer at const variable
+- Missing initialization at const variable
 - Redeclaration in 'const' & 'let'.
 #### Refernece Error :
 - A variable which is not inside the Memory space [Not defined].
