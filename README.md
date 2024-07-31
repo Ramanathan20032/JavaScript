@@ -163,3 +163,20 @@ const - It must be initialized at the palce of declaration. It cannot be redefin
 - When you try to access the variable inside the "Temporal Dead Zone". It throws 'reference error'.
 
 ---
+### Block & Block Scope
+#### Block :
+It is Wrapping up of Multiple statement into one group.
+
+    {
+        // compound statement.
+        // used to combine Multiple js statements into single group.
+    }
+    
+    if(true) console.log('Hi');
+    // Ex. It requires a single statement.
+
+    if(true){
+        var a = 10;
+        console.log(a);
+    }
+    The block can be used in the place where js expects a single statement.
