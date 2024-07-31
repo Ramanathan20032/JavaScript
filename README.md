@@ -180,3 +180,5 @@ It is Wrapping up of Multiple statement into one group.
         console.log(a);
     }
     The block can be used in the place where js expects a single statement.
+
+#### Block Scope :
