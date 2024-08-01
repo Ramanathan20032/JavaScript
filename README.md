@@ -198,3 +198,24 @@ What are the variable and function we can access inside the block.
             // a : undefined
     }
 
+#### Shadowing :
+Same named variable inside the block that Shadows the variable with the same name outside the block.
+
+    global: var a = 100;
+    script: let b = 200;
+    script: const c = 300;
+        {
+            global: var a = 10;
+            block:  let b = 20;
+            block:  const c = 30;
+            console.log(a);      // 10
+            console.log(b);      // 20
+            // b & c both are in 'block scope' which deletes the Memory at the end of the block.
+            console.log(c);      // 30
+        }
+        console.log(a);  // 10
+        console.log(b);  // 200
+        // b & c both are in different Memory space.
+        console.log(c);  // 300
+
+---
