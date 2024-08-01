@@ -182,3 +182,19 @@ It is Wrapping up of Multiple statement into one group.
     The block can be used in the place where js expects a single statement.
 
 #### Block Scope :
+What are the variable and function we can access inside the block.
+
+    {
+        var a = 10;
+        let b = 20;
+        const c = 30;
+
+        // here b & c cannot able to access outside the block. Because 'let' & 'const' are in "Block Scope".
+        // They are Stored in a seperate Memory space which is reserve for block.
+        <!-- block -->
+            // b : undefined
+            // c : undefined
+        <!-- global -->
+            // a : undefined
+    }
+
