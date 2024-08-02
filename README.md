@@ -219,3 +219,28 @@ Same named variable inside the block that Shadows the variable with the same nam
         console.log(c);  // 300
 
 ---
+### Closure
+
+    function x(){
+        var a = 7;
+        function y(){
+            console.log(a);
+        }
+        return y;
+    }
+    z = x();    // y(){consoe.log(a);}  
+    // whole function of y()
+    z();        // 7
+    // function call of y() 
+
+- A function along with its lexical scope bundle together form of 'closure'.
+- Closure is a function bind together with its lexical environment.
+- Once the function completed it gets deleted, even after the deletion it remember the function and its lexical scope.
+
+#### Advantages :
+Data hiding - Encapsulation - Module Pattern.
+
+#### DisAdvantage :
+OverConsumption of Memory.
+
+---
