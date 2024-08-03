@@ -290,6 +290,7 @@ To OverCome this issue in var,
     // 1 2 3 4 5
 
 #### using let :
+
     function y(){
         for(let i = 1; i <= 5; i++){
         // let - block scope
