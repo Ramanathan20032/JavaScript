@@ -244,3 +244,65 @@ Data hiding - Encapsulation - Module Pattern.
 OverConsumption of Memory.
 
 ---
+### SetTimeOut + Closure 
+#### SetTimeOut :
+SetTimeOut takes the callback function attach the Timer, when the timer exploits it called the function.
+
+    var i = 1;
+    // function along with its lexical scope forms a closure.
+    setTimeOut(() => {
+        console.log(i);
+    }, 1000);
+    console.log("Hi")
+
+#### using var :
+
+    function x(){
+        // var - global space
+        // which has a same Memory space for reference (i)
+        // At end of the code execution at the global EC i = 6
+        for(var i = 1; i <= 5; i++){
+            setTimeout(() => {
+                console.log(i);     
+            }, i * 1000);
+        }
+        console.log("hi");
+    }
+    x();
+    // hi
+    // 6 6 6 6 6
+
+To OverCome this issue in var,
+
+    function z(){
+    for(var i = 1; i <= 5; i++){
+        function close(x){
+            setTimeout(() => {
+                console.log(x);
+            }, x * 1000);
+        }
+        close(i)
+    }
+    console.log("Hi");
+    }
+    z();
+    // hi
+    // 1 2 3 4 5
+
+#### using let :
+    function y(){
+        for(let i = 1; i <= 5; i++){
+        // let - block scope
+            setTimeout(() => {
+                console.log(i);
+            }, i * 1000);
+        // This cb() has a new copy of (i) at every iteration
+        // Because, it forms a new closure for each iteration.
+        }
+        console.log("hi");
+    }
+    y();
+    // hi
+    // 1 2 3 4 5
+
+---
