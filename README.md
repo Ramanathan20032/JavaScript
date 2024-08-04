@@ -315,3 +315,11 @@ To OverCome this issue in var,
     }
 - function statement is used to define a function with a specific name.
 - function declaration are similar to the function statement.
+
+#### function Expression :
+    // Not Hoisted - In TDZ
+    var a = function(){
+        console.log('Hi');
+    }
+- unlike, function declaration a function Expression can be 'anonymous' and 'Not Hoisted'.
+- function Expression are assigned to variable.
