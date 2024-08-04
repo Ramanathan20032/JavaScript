@@ -307,3 +307,11 @@ To OverCome this issue in var,
     // 1 2 3 4 5
 
 ---
+### First Class Function
+#### Function statement :
+    // hoisted
+    function a(){
+        // body
+    }
+- function statement is used to define a function with a specific name.
+- function declaration are similar to the function statement.
