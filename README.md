@@ -329,3 +329,12 @@ To OverCome this issue in var,
         syntax error : function name requires.
     }
 Anonymous Function - Function without the name.
+
+#### Named Function Expression :
+    var b = function xyz(){
+        console.log('Hi');
+    }
+    b();
+    xyz(); 
+- It is same as function Expression instead of anonymous function, function is used with name.
+- xyz() can't be able to access outside the global scope.
