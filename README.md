@@ -346,3 +346,19 @@ Anonymous Function - Function without the name.
     abc('Hello');           // Argument
 Parameter - At Function Declaration
 Argument - At Function Calling
+
+#### First Class Function :
+
+    var b = function(parameter){
+        console.log(parameter);
+    }
+    b(xyz);
+
+    function xyz(){
+
+    }
+- The Ability of function to be used as values.
+- The Ability of function to be treated as a value, "passed into another function as Argument" & "return out from function".
+- This Ability to use like a value is 'First Class Citizens'.
+
+---
