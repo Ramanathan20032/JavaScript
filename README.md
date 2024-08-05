@@ -338,3 +338,11 @@ Anonymous Function - Function without the name.
     xyz(); 
 - It is same as function Expression instead of anonymous function, function is used with name.
 - xyz() can't be able to access outside the global scope.
+
+#### D/B Parameter & Argument :
+    function abc(String){   // parameter
+        console.log(String);
+    }
+    abc('Hello');           // Argument
+Parameter - At Function Declaration
+Argument - At Function Calling
