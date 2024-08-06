@@ -362,3 +362,24 @@ Argument - At Function Calling
 - This Ability to use like a value is 'First Class Citizens'.
 
 ---
+### callback Function :
+
+    // cb() to perform asynchronous operation.
+    setTimeout(function(){
+        console.log('Timer');   // 3
+    }, 5000);
+    function x(y){
+        console.log('x');       // 1
+        y();
+    }
+    // cb().
+    x(function(){
+        console.log('y');       // 2
+    })
+
+- function are the 'First class Citizens' in js.
+- function passing into another function is known as callback function.
+- function which is passed into Higher order function is 'callback function'.
+- By using callback, we can achieve asynchronous operation.
+
+---
