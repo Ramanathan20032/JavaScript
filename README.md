@@ -395,3 +395,13 @@ Argument - At Function Calling
     attachEventListners();
 
 - In Js, EventListners is a function that wait for an event to occur on a particular element & execute the specified function when that event occurs.
+
+#### Why EventListners are needed to be removed ?
+    EventListners are heavy and take more memory.
+- When the EventListners are created. It takes a memory & forms a closure. 
+- They only get executed when the event occurs.
+- so, It doesn't free up their memory.
+- when the EventListners are removed, then they are garbage collected and free up their memory space.
+- It will stay in web API(browser). until the browser get closed (or) explicitly remove the event.
+
+---
