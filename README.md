@@ -383,3 +383,15 @@ Argument - At Function Calling
 - By using callback, we can achieve asynchronous operation.
 
 ---
+### EventListners :
+    function attachEventListners(){
+        let count = 0;
+        // This function forms a closure.
+        document.getElementById('click me')
+        .addEventListener('click', function a(){
+            console.log('Button clicked', ++count);
+        });
+    }
+    attachEventListners();
+
+- In Js, EventListners is a function that wait for an event to occur on a particular element & execute the specified function when that event occurs.
