@@ -405,3 +405,25 @@ Argument - At Function Calling
 - It will stay in web API(browser). until the browser get closed (or) explicitly remove the event.
 
 ---
+---
+### Web API's in Js
+#### web API :
+These are the super power which is 
+given by the browsers to the JS 
+Engine through the window object in form of API.
+
+    windows
+    --
+     setTimeout()
+     DOM Api
+     fetch()
+     console
+     local Storage
+     location
+
+- Actually, These are not part of js engine.
+- They are part of browsers.
+- browsers give access to the js engine.
+- They can be access via windows keyword.
+- The browser wrap up all API into global object window.
+
