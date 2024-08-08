@@ -405,7 +405,6 @@ Argument - At Function Calling
 - It will stay in web API(browser). until the browser get closed (or) explicitly remove the event.
 
 ---
----
 ### Web API's in Js
 #### web API :
 These are the super power which is 
@@ -427,3 +426,8 @@ Engine through the window object in form of API.
 - They can be access via windows keyword.
 - The browser wrap up all API into global object window.
 
+#### Asynchronous callback function :
+- The callback function with Asynchronous operation are performed by the browsers (web Api). once it get completed.
+- They are transfered into "callback queue" (or) "Micro task queue".
+        
+        Micro task queue > callback queue
