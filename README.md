@@ -432,7 +432,7 @@ Engine through the window object in form of API.
         
         Micro task queue > callback queue
 
-#### callback queue :
+#### Callback queue :
 - when the asynchronous callback (setTimeout, DOM Api, EventListners) functions are completed their respective task. 
 - They were pushed into the "callback queue".
 
@@ -441,3 +441,16 @@ Engine through the window object in form of API.
 - The callback function through "promises", "Muttion Observer". 
 - when they are settled.
 - They were pushed into the "Micro task queue".
+
+#### Event Loop:
+- The Event Loop Monitors the 'call stack'.
+- Also, event Loop Monitors both the 'Micro task queue' & 'callback queue'.
+- when the call stack is empty. It push the cb() from the "Micro task queue" & "callback queue" to the call stack.
+                
+        Micro task queue - cb1() cb2() cb3()
+        callback queue   - cb1()
+    
+- when the call stack is empty, The cb() inside the 'Micro task queue' will be executed First.
+- Where, the cb() inside the 'callback queue' will be executed later after the completion of 3 cb() from the Micro task queue.
+
+---
