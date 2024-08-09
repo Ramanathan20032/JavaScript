@@ -435,3 +435,9 @@ Engine through the window object in form of API.
 #### callback queue :
 - when the asynchronous callback (setTimeout, DOM Api, EventListners) functions are completed their respective task. 
 - They were pushed into the "callback queue".
+
+#### Micro task queue (Higher priority) :
+- Similar to callback queue, but it has Higher priority.
+- The callback function through "promises", "Muttion Observer". 
+- when they are settled.
+- They were pushed into the "Micro task queue".
