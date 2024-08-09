@@ -431,3 +431,7 @@ Engine through the window object in form of API.
 - They are transfered into "callback queue" (or) "Micro task queue".
         
         Micro task queue > callback queue
+
+#### callback queue :
+- when the asynchronous callback (setTimeout, DOM Api, EventListners) functions are completed their respective task. 
+- They were pushed into the "callback queue".
