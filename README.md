@@ -459,3 +459,13 @@ JSRE - has a general things requires to run JavaScript code like JS Engine, Even
 
 - Browsers has a JavaScript Runtime Environment.
 - Node.js has a JavaScript Runtime Environment, This able to run js code outside the browser.
+
+#### JS Engines :
+JS Engine should meet the ECMA script standards.
+- Microsoft - chakra
+- FireFox   - spider Monkey
+- Google, Node.js - V8
+Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever created.
+
+#### Basic Architecture of Js Engine :
+    code -> parsing -> compilation -> Execution
