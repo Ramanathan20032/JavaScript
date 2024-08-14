@@ -438,7 +438,7 @@ Engine through the window object in form of API.
 
 #### Micro task queue (Higher priority) :
 - Similar to callback queue, but it has Higher priority.
-- The callback function through "promises", "Muttion Observer". 
+- The callback function through "promises", "Mutation Observer". 
 - when they are settled.
 - They were pushed into the "Micro task queue".
 
@@ -454,3 +454,8 @@ Engine through the window object in form of API.
 - Where, the cb() inside the 'callback queue' will be executed later after the completion of 3 cb() from the Micro task queue.
 
 ---
+### JavaScript Runtime Environment 
+JSRE - has a general things requires to run JavaScript code like JS Engine, Event Loop, Micro task Queue, callback queue, Api's (connects to outer environment).
+
+- Browsers has a JavaScript Runtime Environment.
+- Node.js has a JavaScript Runtime Environment, This able to run js code outside the browser.
