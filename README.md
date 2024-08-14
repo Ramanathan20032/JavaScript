@@ -469,3 +469,7 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 
 #### Basic Architecture of Js Engine :
     code -> parsing -> compilation -> Execution
+
+#### Parsing :
+- During Parsing, the code is broken into Tokens.
+- Then, "Syntax parser" convert the whole code into "Abstract Syntax Tree (AST)".
