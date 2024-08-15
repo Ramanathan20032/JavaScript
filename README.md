@@ -474,3 +474,7 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 #### Parsing :
 - During Parsing, the code is broken into Tokens.
 - Then, "Syntax parser" convert the whole code into "Abstract Syntax Tree (AST)".
+
+#### compilation :
+- Interpreter - Start Executing the code line by line.
+- compiler - The code is compiled even before the Execution of code. The Job of compiler is to optimize the code as much, it can on the run time and also convert into byte code.
