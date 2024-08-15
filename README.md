@@ -484,3 +484,10 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 - modern JS Engine uses both, It depends on JS Engine.
 - JS Engine can use Interpreter along with compiler and that makes JIT.
 - Js is a JIT compile language.
+
+#### Execution :
+- Execution phase has memory heap and call stack.
+- Memory Heap - All the variable & Function are assigned Memory and has a link with the garbage collector to free up Memory.
+- Call stack - Everything in Js is executed inside the call stack.
+
+---
