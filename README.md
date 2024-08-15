@@ -478,3 +478,9 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 #### compilation :
 - Interpreter - Start Executing the code line by line.
 - compiler - The code is compiled even before the Execution of code. The Job of compiler is to optimize the code as much, it can on the run time and also convert into byte code.
+
+#### Just In Time (JIT) Compiler :
+- initially, JS is a Interpreter language.
+- modern JS Engine uses both, It depends on JS Engine.
+- JS Engine can use Interpreter along with compiler and that makes JIT.
+- Js is a JIT compile language.
