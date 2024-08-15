@@ -491,3 +491,25 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 - Call stack - Everything in Js is executed inside the call stack.
 
 ---
+### setTimeout [Trust Issues] - Concurrency Model
+
+    console.log('start');
+    setTimeout(function cb(){
+            console.log('call back');
+    }, 5000);
+    // 10 million of code, 10s require to execute.
+    console.log('end');
+
+    o/p : 
+        start
+        end 
+        after 10s : Execution of GEC code.
+        callback
+
+- cb() will be hold in the callback queue after it Expires (5s).
+- until the Execution of 10 million code in the global Execution context.
+- It wait for the GEC to pop-out from the call stack, This is Called "Concurrency Model".
+- setTimeout(0) will also work in a Concurrency Model. 
+- It is used to differ the preference of the code.
+
+---
