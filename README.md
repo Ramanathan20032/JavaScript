@@ -513,3 +513,18 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 - It is used to differ the preference of the code.
 
 ---
+### Higher Order Function
+        function x(){
+            console.log('x');
+        }
+        // y - Higher Order Function
+        // x - callback Function 
+        function y(x){
+            console.log('y');
+            x();
+        }
+- Function which take another function as an Argument (or) return a function from it, is known as "Higher Order Function".
+- Function which is passed into Higher Order Function is 'callback Function'.
+- It is possible, because function are "First Class Citizens" in JS.
+
+---
