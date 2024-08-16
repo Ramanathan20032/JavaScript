@@ -528,3 +528,15 @@ Google's v8 is the fastest JS Engines. spider Monkey is the First JS Engine ever
 - It is possible, because function are "First Class Citizens" in JS.
 
 ---
+### Map, Filter & Reduce 
+Map, Filter, Reduce are Higher Order Functions.
+
+#### map() :
+    const arr = [3, 1, 5, 2 , 4];
+    const double = arr.map((x) => x * 2);
+    console.log(double);
+    // [6, 2, 10, 4, 8]
+    // In map(), code with multiple statement require 'return' statement.
+
+- Map() is used to transform a array.
+- Map() creates a new array with the result of calling a provided function on every element in a Array.
