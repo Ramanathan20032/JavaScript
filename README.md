@@ -540,3 +540,14 @@ Map, Filter, Reduce are Higher Order Functions.
 
 - Map() is used to transform a array.
 - Map() creates a new array with the result of calling a provided function on every element in a Array.
+
+#### filter() :
+    const arr = [3, 1, 5, 2, 4];
+    const odd = arr.filter((x) => x % 2 !== 0);
+    console.log(odd);
+    // [3, 1, 5]
+    // In Filter(), code with multiple statement require 'return' statement.
+
+- Filter() is used to filter the values in array.
+- Filter() creates a new array with all elements that passes the test by provided function.
+
