@@ -551,3 +551,18 @@ Map, Filter, Reduce are Higher Order Functions.
 - Filter() is used to filter the values in array.
 - Filter() creates a new array with all elements that passes the test by provided function.
 
+#### Reduce() :
+    const arr = [5, 1, 3, 2, 6];
+    const output = arr.reduce((acc, cur) => {
+            acc += cur;
+            return acc;
+    }, 0);
+    console.log(output); // 17
+
+- The Reduce() executes the Reducer Function on each element of the array, resulting in a single output value.
+- Reducer() take two parameter as (accumulator, currentValue).
+- accumulator - used to accumulate the Result.
+- currentValue - represents the each value in the array at every iteration.
+- initialization of accumulator is passed as an second Argument of reduce().
+
+---
