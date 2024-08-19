@@ -583,3 +583,12 @@ One callback inside the another callback inside another callback makes the callb
             })
         })
     })
+
+#### Inversion of code :
+Losing the control of the code, while using callbacks.
+         
+    // The control of the code is depend on createOrder(). 
+    api.createOrder(cart, () => {
+        api.proceedToPayment();
+        // proceedToPayment() is depend on the createOrder().
+    })
