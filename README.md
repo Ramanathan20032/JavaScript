@@ -570,3 +570,16 @@ Map, Filter, Reduce are Higher Order Functions.
 Function which take another function as an Argument is known as callback function.
 
         const cart = ['pant', 'shoes', 'kurta']
+
+#### Callback hell :
+One callback inside the another callback inside another callback makes the callback hell.
+
+    // createOrder - has responsible for creating 'cart'. call the payment() back.
+    api.createOrder(cart, ()=> {
+        // proceedToPayment - has responsible for payment. call the showOrder() back.             
+        api.proceedToPayment(() => {
+            api.showOrder(() => {
+                api.walletBalance();
+            })
+        })
+    })
