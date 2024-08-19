@@ -566,3 +566,7 @@ Map, Filter, Reduce are Higher Order Functions.
 - initialization of accumulator is passed as an second Argument of reduce().
 
 ---
+### DisAdvantages of call back:
+Function which take another function as an Argument is known as callback function.
+
+        const cart = ['pant', 'shoes', 'kurta']
