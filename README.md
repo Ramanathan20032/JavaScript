@@ -601,3 +601,9 @@ Losing the control of the code, while using callbacks.
 - They are two properties of promises.
 - .then() is used to catch "resolves" {success}
 - .catch() is used to catch "reject" {failure}
+
+#### Promise states [[promiseState]]:
+initially, Promise will be in 'Pending' state. Once the promise get 'settled', it turns into 'Fullfilled' or 'Rejected' based on the result.
+- Pending.
+- Fullfilled.
+- Rejected.
