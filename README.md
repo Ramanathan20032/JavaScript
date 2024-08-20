@@ -592,3 +592,12 @@ Losing the control of the code, while using callbacks.
         api.proceedToPayment();
         // proceedToPayment() is depend on the createOrder().
     })
+
+---
+### Promise
+- Promise is an object which representing the eventual completion (or) failure of an asynchronous operation.
+- Promise helps in dealing with callback hell and inversion of code.
+- Promise chaining helps the code more readable.
+- They are two properties of promises.
+- .then() is used to catch "resolves" {success}
+- .catch() is used to catch "reject" {failure}
