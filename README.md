@@ -607,3 +607,8 @@ initially, Promise will be in 'Pending' state. Once the promise get 'settled', i
 - Pending.
 - Fullfilled.
 - Rejected.
+
+#### Promise Result [[promiseResult]]:
+once the result get fetched. Promise result turns into 'Response' of the data.
+
+---
