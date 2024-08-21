@@ -634,3 +634,28 @@ In Promise,
     })
 
 ---
+#### Promise Chain :
+Promise chain is a Sequence of call on JS Promise.
+Allow async operation to be performed in specific order. 
+     
+    createOrder(cart)
+    .then((orderId) => {
+        return proceedToPayment(orderId);
+    })
+    .then((paymentInfo) => {
+        return showOrderSummary(paymentInfo);
+    })
+    .then((paymentInfo) => {
+        return updateWallet(paymentInfo);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+    .then(() => {
+        console.log("No matter what happens");
+    }) 
+
+NOTE :
+- while using Promise chain, we should return a value (or) Promise from the previous promise for next .then()
+- .catch() only handle the error of .then() that are presented above it.
+- If there is any .then() below it .catch() will not handle it.
