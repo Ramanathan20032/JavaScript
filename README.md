@@ -612,3 +612,25 @@ initially, Promise will be in 'Pending' state. Once the promise get 'settled', i
 once the result get fetched. Promise result turns into 'Response' of the data.
 
 ---
+### D/B callback & promise
+
+In cb(),
+
+    // passing the cb() to the another cb() function.
+    // control of the code is on createOrder()
+    createOrder(cart, (orderId) => {
+        proceedToPayment(orderId);
+    })
+
+In Promise,
+
+    // Attaching the cb() to the promise object.
+    // The control of the code is on Sequence one after another.
+    const promise = createOrder(cart); // async op returns a promise.
+
+    // once promise get settles.
+    promise.then((orderId) => {        // promise returned from the createOrderAPI.
+        proceedToPayment(orderId);
+    })
+
+---
