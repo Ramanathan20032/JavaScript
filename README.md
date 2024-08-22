@@ -684,3 +684,18 @@ Promise API - used to handle "Multiple Promise Together".
 - Promise.allSettled()
 - Promise.race()
 - Promise.any()
+
+#### Promise.all() : 
+
+- used to make parallel API Calls.
+- used to handle Multiple Promise Together.
+
+Case 1 :
+- if all are success, it return the result of array of all promises.
+- And it wait for all of them to finish.
+
+Case 2 :
+- if any one of them fails.
+- As soon as any of the promise will get rejected, .all() throws an error.
+- return by rejected promise.
+- And it doesnt wait for other promises to get settles.
