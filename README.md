@@ -677,3 +677,10 @@ NOTE :
 - Promise constructor takes callback function as Argument.
 - Callback function has two parameter 'resolve' & 'reject'.
 - In Promise, resolve() (or) reject() are called only once in the promise.
+
+### Promise API 
+Promise API - used to handle "Multiple Promise Together".
+- Promise.all()
+- Promise.allSettled()
+- Promise.race()
+- Promise.any()
