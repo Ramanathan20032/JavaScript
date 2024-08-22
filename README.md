@@ -659,3 +659,21 @@ NOTE :
 - while using Promise chain, we should return a value (or) Promise from the previous promise for next .then()
 - .catch() only handle the error of .then() that are presented above it.
 - If there is any .then() below it .catch() will not handle it.
+
+### How to create a Promise
+    
+    // createPromise() returna a promise.
+    function createPromise(){
+        return new Promise((resolve, reject) => {
+             if(true){
+                resolve("success");
+             }
+             else{
+                reject("failure");
+             }
+        })
+    }
+
+- Promise constructor takes callback function as Argument.
+- Callback function has two parameter 'resolve' & 'reject'.
+- In Promise, resolve() (or) reject() are called only once in the promise.
