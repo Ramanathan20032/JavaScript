@@ -699,3 +699,16 @@ Case 2 :
 - As soon as any of the promise will get rejected, .all() throws an error.
 - return by rejected promise.
 - And it doesnt wait for other promises to get settles.
+
+#### Promise.allSettled() : 
+
+Case 1 :
+- if all are success, it return an 'array of objects' with the result of all promises.
+- it is similar to .all()
+
+Case 2 :
+- if any one of them fails.
+- it wait for all promises to get settles(resolves or rejects).
+- And return an 'array of objects' with the result of all promises.
+- success : [state, value]
+- failure : [state, reasons]
