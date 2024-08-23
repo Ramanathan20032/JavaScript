@@ -712,3 +712,14 @@ Case 2 :
 - And return an 'array of objects' with the result of all promises.
 - success : [state, value]
 - failure : [state, reasons]
+
+#### Promise.race() : 
+
+- Returns the result (value) of the first settled(either success (or) failure) promise
+- doesnt wait for other promise to get settles.
+
+Case 1 :
+- if it settle(success) first, it return with value.
+
+case 2 :
+-  if it settles(failure) first, it return with ERROR of that promise.
