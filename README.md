@@ -723,3 +723,16 @@ Case 1 :
 
 case 2 :
 -  if it settles(failure) first, it return with ERROR of that promise.
+
+#### Promise.any() :
+
+case 1 :
+- seeking for the first settled success.
+- .any() will wait for the first promise to get settled "successfully".
+- and return the value of the promise.
+
+case 2: 
+- if all the promises get failed.
+- after promise get settles, it returns the result of "aggregate Error".
+- aggregate Error - aggregating the array of all three(promises) error.
+
