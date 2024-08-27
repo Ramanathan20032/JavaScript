@@ -736,3 +736,7 @@ case 2:
 - after promise get settles, it returns the result of "aggregate Error".
 - aggregate Error - aggregating the array of all three(promises) error.
 
+---
+### Async/Await
+- Async/Await is used to handle promise.
+- Async/ Await is a syntactic sugar over promise.
