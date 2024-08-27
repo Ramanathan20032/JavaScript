@@ -740,3 +740,19 @@ case 2:
 ### Async/Await
 - Async/Await is used to handle promise.
 - Async/ Await is a syntactic sugar over promise.
+
+#### Async :
+
+    async function getData(){
+        return p;
+    }
+
+- Async is a keyword used to create asynchronous function.
+- Async function always returns a promise.
+
+Two cases while returning promise.
+
+- case 1 : if the function returns a non-promise value. instead of returning a promise, then 'non-promise' value automatically 'wrap inside the promise' and return as promise.
+- case 2 : if itself return as promise, it will not wrap into promise. it will return as it is.
+
+  
