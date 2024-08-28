@@ -775,3 +775,20 @@ Two cases while returning promise.
 - Async/Await is used to handle promise.
 - Await can be used only inside the async function.
 - Await keyword used infront of promise, it wait for promise to be settled.
+
+---
+### D/B Promise & Async/Await
+#### using promise : [ JS Engine will not wait for promise to settled ]
+
+    function getData(){
+        console.log('Start');
+        p.then((res) => console.log(res));
+        console.log('End')
+    }
+    getData();
+
+    O/P : 
+        start 
+        end
+        // after 10s
+        promise resolved value
