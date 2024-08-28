@@ -755,4 +755,23 @@ Two cases while returning promise.
 - case 1 : if the function returns a non-promise value. instead of returning a promise, then 'non-promise' value automatically 'wrap inside the promise' and return as promise.
 - case 2 : if itself return as promise, it will not wrap into promise. it will return as it is.
 
-  
+#### Await :
+
+    const p = new promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("promise resolved value")
+        }, 10000);
+    })
+    async function getData(){
+            // it wait for the promise to get settle (10s).
+            const data = await p;
+            console.log(data);
+    }
+    getdata();
+    NOTE : here, getaData() Execution is suspended from the call stack
+    until the promise get settles. then, push into the call stack and it 
+    executes from where it Actually left.
+
+- Async/Await is used to handle promise.
+- Await can be used only inside the async function.
+- Await keyword used infront of promise, it wait for promise to be settled.
