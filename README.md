@@ -792,3 +792,22 @@ Two cases while returning promise.
         end
         // after 10s
         promise resolved value
+
+#### using Async/Await : [ JS Engine will wait for promise to settled ]
+
+    function handlePromise(){
+        console.log('Hello World');
+        const val = await p;
+        // wait for promise to settles.
+        console.log('Start');
+        console.log(val);
+        console.log('End');
+    }
+    handlePromise();
+
+    O/P :
+        Hello World
+        // after 10s
+        promise resolved value
+        Start
+        End
