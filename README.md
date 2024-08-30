@@ -811,3 +811,25 @@ Two cases while returning promise.
         promise resolved value
         Start
         End
+
+#### Error Handling :
+- Try / Catch block is used to handle the error in async / await function.
+- Asynchronous code are wrap into the 'try block'.
+- To catch the error, inside the 'catch block'.
+
+      const API_url = "https://invalid";
+
+      async function handlePromise() {
+        try {
+            const data = await fetch(API_url);
+            const jsonValue = await data.json();
+            console.log(jsonValue);
+        } 
+        catch (err) {
+            console.log(err);
+        }
+      }
+      handlePromise(); // return promise
+      handlePromise().catch(err => console.log(err));
+
+---
