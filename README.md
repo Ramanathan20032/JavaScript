@@ -833,3 +833,63 @@ Two cases while returning promise.
       handlePromise().catch(err => console.log(err));
 
 ---
+
+### Async/Await Examples:
+    // promise 1 - [p1, 5s]
+    const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promise resolved value 1");
+        }, 5000);
+    });
+
+    // promise 2 - [p2, 10s]
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promise resolved value 2");
+        }, 10000);
+    });
+
+    async function handlePromise() {
+      console.log("Hello World");
+
+      // It doesn't block the main thread.
+
+      // -- here, handlePromise() Execution is suspended from the call stack
+      until the promise get settles. then, push into the call stack and it 
+      executes from where it Actually left. --
+
+      const val = await p1;
+      
+      console.log("data1");
+      console.log(val);
+      
+      // -- here, handlePromise() Execution is suspended from the call stack
+      until the promise get settles. then, push into the call stack and it 
+      executes from where it Actually left. --
+
+      const val1 = await p2;
+
+      console.log("data2");
+      console.log(val1);
+    }
+    handlePromise();
+
+    o/p :
+        hello world
+
+        after 5s
+        data 1
+        Promise resolved value 1
+
+        after 10s -> 5s(prev) + 5s
+        data 2
+        Promise resolved value 2
+
+NOTE : 
+ 
+- if the promise, get return from the 'variable',
+- will allow the timer to run Concurrently.
+- [p1, 10s] , [p2, 5s] - Total Execution is determined by 10s.
+- if the promise, get return from the 'function'.
+- leading to the Sequential execution of timer.
+- [p1, 10s] , [p2, 5s] - - Total Execution is determined by 15s.
