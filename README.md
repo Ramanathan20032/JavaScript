@@ -893,3 +893,14 @@ NOTE :
 - if the promise, get return from the 'function'.
 - leading to the Sequential execution of timer.
 - [p1, 10s] , [p2, 5s] - - Total Execution is determined by 15s.
+
+---
+### Fetch
+#### How does fetch() works :
+- fetch('url') function return a promise.
+- that resolves toa Response object.
+- To convert the Response object into JSON "Response.JSON" return a promise. 
+
+        fetch() -> response.JSON -> JSON value
+
+---
