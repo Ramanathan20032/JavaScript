@@ -833,7 +833,6 @@ Two cases while returning promise.
       handlePromise().catch(err => console.log(err));
 
 ---
-
 ### Async/Await Examples:
     // promise 1 - [p1, 5s]
     const p1 = new Promise((resolve, reject) => {
@@ -902,5 +901,5 @@ NOTE :
 - To convert the Response object into JSON "Response.JSON" return a promise. 
 
         fetch() -> response.JSON -> JSON value
-
+  
 ---
