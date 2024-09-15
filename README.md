@@ -897,7 +897,7 @@ NOTE :
 ### Fetch
 #### How does fetch() works :
 - fetch('url') function return a promise.
-- that resolves toa Response object.
+- that resolves to a Response object.
 - To convert the Response object into JSON "Response.JSON" return a promise. 
 
         fetch() -> response.JSON -> JSON value
