@@ -1,0 +1,31 @@
+.container{
+    background-color: midnightblue;
+    color: aliceblue;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    left: 30%;
+}
+.container input{
+    width: 70%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+.container input:hover{
+    background-color: beige;
+}
+.container button{
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(80, 181, 80);
+    color: aliceblue;
+    border: 1px solid rgb(80, 181, 80);
+    margin-left: 5px;
+}
+.container button:hover{
+    background-color: rgb(46, 155, 46);
+    color: aliceblue;
+}
