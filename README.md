@@ -808,8 +808,8 @@ Two cases while returning promise.
     O/P :
         Hello World
         // after 10s
-        promise resolved value
         Start
+        promise resolved value
         End
 
 #### Error Handling :
